@@ -10,8 +10,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   QRCaptureController _captureController = QRCaptureController();
-  Animation<Alignment> _animation;
-  AnimationController _animationController;
+  late Animation<Alignment> _animation;
+  late AnimationController _animationController;
 
   bool _isTorchOn = false;
 
