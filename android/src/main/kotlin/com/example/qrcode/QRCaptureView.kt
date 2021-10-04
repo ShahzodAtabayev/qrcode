@@ -23,25 +23,25 @@ import io.flutter.plugin.platform.PlatformView
 class QRCaptureView(private val registrar: PluginRegistry.Registrar, id: Int) :
         PlatformView, MethodCallHandler {
     override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
-        when(call?.method){
+        when (call?.method) {
             "checkAndRequestPermission" -> {
                 checkAndRequestPermission(result)
             }
         }
 
-        when(call?.method){
+        when (call?.method) {
             "resume" -> {
                 resume()
             }
         }
 
-        when(call?.method){
+        when (call?.method) {
             "pause" -> {
                 pause()
             }
         }
 
-        when(call?.method){
+        when (call?.method) {
             "setTorchMode" -> {
                 val isOn = call.arguments as Boolean
                 barcodeView?.setTorch(isOn);
@@ -123,35 +123,35 @@ class QRCaptureView(private val registrar: PluginRegistry.Registrar, id: Int) :
         barcode.resume()
 
         registrar.activity().application.registerActivityLifecycleCallbacks(
-         object : Application.ActivityLifecycleCallbacks {
-             override fun onActivityPaused(p0: Activity?) {
-                 if (p0 == registrar.activity()) {
-                     barcodeView?.pause()
-                 }
-             }
+                object : Application.ActivityLifecycleCallbacks {
+                    override fun onActivityPaused(p0: Activity?) {
+                        if (p0 == registrar.activity()) {
+                            barcodeView?.pause()
+                        }
+                    }
 
-             override fun onActivityResumed(p0: Activity?) {
-                 if (p0 == registrar.activity()) {
-                     barcodeView?.resume()
-                 }
-             }
+                    override fun onActivityResumed(p0: Activity?) {
+                        if (p0 == registrar.activity()) {
+                            barcodeView?.resume()
+                        }
+                    }
 
-             override fun onActivityStarted(p0: Activity?) {
-             }
+                    override fun onActivityStarted(p0: Activity?) {
+                    }
 
-             override fun onActivityDestroyed(p0: Activity?) {
-             }
+                    override fun onActivityDestroyed(p0: Activity?) {
+                    }
 
-             override fun onActivitySaveInstanceState(p0: Activity?, p1: Bundle?) {
-             }
+                    override fun onActivitySaveInstanceState(p0: Activity?, p1: Bundle?) {
+                    }
 
-             override fun onActivityStopped(p0: Activity?) {
-             }
+                    override fun onActivityStopped(p0: Activity?) {
+                    }
 
-             override fun onActivityCreated(p0: Activity?, p1: Bundle?) {
-             }
+                    override fun onActivityCreated(p0: Activity?, p1: Bundle?) {
+                    }
 
-         }
+                }
         )
     }
 

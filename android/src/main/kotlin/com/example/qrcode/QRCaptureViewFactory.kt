@@ -12,7 +12,7 @@ class QRCaptureViewFactory(private val registrar: PluginRegistry.Registrar) :
         PlatformViewFactory(StandardMessageCodec.INSTANCE) {
 
     override fun create(context: Context, id: Int, obj: Any?): PlatformView {
-        return QRCaptureView(registrar,id)
+        return QRCaptureView(registrar, id)
     }
 
 }
