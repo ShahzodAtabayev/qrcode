@@ -57,7 +57,7 @@
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                   [self.session startRunning];
              });
-            self.captureLayer.connection.videoOrientation=UIInterfaceOrientationLandscapeRight;
+            self.captureLayer.connection.videoOrientation=UIInterfaceOrientationPortrait;
         } else { 
 
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Tips" message:@"Authorization is required to use the camera, please check your permission settings: Settings> Privacy> Camera" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];

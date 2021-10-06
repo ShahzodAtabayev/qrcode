@@ -1,20 +1,21 @@
 PODS:
-  - Flutter (1.0.0)
+  - Flutter (2.5)
   - qrcode (0.0.1):
     - Flutter
 
 DEPENDENCIES:
-  - Flutter (from `.symlinks/flutter/ios`)
   - qrcode (from `.symlinks/plugins/qrcode/ios`)
 
+SPEC REPOS:
+  trunk:
+    - Flutter
+
 EXTERNAL SOURCES:
-  Flutter:
-    :path: ".symlinks/flutter/ios"
   qrcode:
     :path: ".symlinks/plugins/qrcode/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  Flutter: 4e094eefe76d76f60537272587a6eb1abcf12d09
   qrcode: 703d52352679d9b4284555e9a09c2157062f1989
 
 PODFILE CHECKSUM: 7fb83752f59ead6285236625b82473f90b1cb932
