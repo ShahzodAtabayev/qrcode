@@ -1,5 +1,4 @@
 package com.example.qrcode
-
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
 class QrcodePlugin {
